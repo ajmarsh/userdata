@@ -1,0 +1,33 @@
+##!/bin/bash
+
+# userdata script 
+# 2016-12-13
+
+#Debian package manager
+install()
+{
+    apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get -y \
+        -o DPkg::Options::=--force-confdef \
+        -o DPkg::Options::=--force-confold \
+        install $@
+}
+
+
+#update box w/ latest security fixes
+
+apt-get update
+apt-get upgrade
+
+#install chef
+curl -L https://www.opscode.com/chef/install.sh | bash
+
+#install usefull software
+apt-get install zip
+apt-get install screen
+apt-get install pdsh
+apt-get install sysstat
+apt-get install fail2ban
+
+
+
