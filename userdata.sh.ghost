@@ -1,0 +1,23 @@
+##!/bin/bash
+
+# userdata script ajmarsh.com
+# 2014-12-22
+
+#update box w/ latest security fixes
+
+yum update
+
+# install sane repos
+yum install epel-release
+
+#install chef
+curl -L https://www.opscode.com/chef/install.sh | bash
+
+#install usefull software
+yum install zip
+yum install unzip
+yum install screen
+yum install pdsh
+yum install sysstat
+
+yum install nodejs npm --enablerepo=epel
