@@ -19,5 +19,6 @@ yum install unzip
 yum install screen
 yum install pdsh
 yum install sysstat
+yum install htop
 
 yum install nodejs npm --enablerepo=epel
