@@ -29,5 +29,8 @@ apt-get install pdsh
 apt-get install sysstat
 apt-get install fail2ban
 
-
+# install netdata for monitoring 
+bash <(curl -Ss https://my-netdata.io/kickstart.sh) 
+systemctl enable netdata.service 
+systemctl start netdata
 
